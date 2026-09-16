@@ -1,0 +1,31 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/heynemann/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+export PATH="~/.zsh/bin:$PATH"
+
+if [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+  export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
+  eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+fi
+
+if [ -f "$HOME/.local.zsh" ]; then
+  source "$HOME/.local.zsh" ]
+fi
+
+if [ -f "$HOME/.alias.zsh" ]; then
+  source "$HOME/.alias.zsh" ]
+fi
+
+# General configs
+source "$HOME/.zsh/includes/general.zsh"
