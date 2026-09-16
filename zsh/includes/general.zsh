@@ -1,3 +1,5 @@
+export EDITOR="nvim"
+
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
@@ -253,3 +255,12 @@ fi
 if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
+
+function reload() {
+  source ~/.zshrc
+}
+
+alias sz="reload"
+alias ea="$EDITOR ~/.alias.zsh;reload"
+alias el="$EDITOR ~/.local.zsh;reload"
+alias ez="$EDITOR ~/.zshrc;reload"

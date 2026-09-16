@@ -29,3 +29,6 @@ fi
 
 # General configs
 source "$HOME/.zsh/includes/general.zsh"
+
+# Plugins
+source "$HOME/.zsh/includes/mise.zsh"

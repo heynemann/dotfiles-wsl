@@ -9,3 +9,12 @@ git-setup:
 	@git config --global color.status auto
 	@git config --global color.branch auto
 	@git config --global core.editor "nvim"
+
+vim-brew:
+	@brew install fzf
+	@brew install neovim
+
+vim-symlinks:
+	@rm -f ~/.config/nvim
+	@ln -s ${PWD}/nvim ~/.config/nvim
+	@touch ~/.local.nvim.lua
