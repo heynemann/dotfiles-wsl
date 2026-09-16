@@ -18,3 +18,13 @@ vim-symlinks:
 	@rm -f ~/.config/nvim
 	@ln -s ${PWD}/nvim ~/.config/nvim
 	@touch ~/.local.nvim.lua
+
+zsh-plugins:
+	@brew install antidote
+
+zsh-symlinks:
+	@rm -f ~/.zshrc
+	@rm -f ~/.zsh
+	@ln -s ${PWD}/zsh ~/.zsh
+	@ln -s ${PWD}/zsh/zshrc ~/.zshrc
+	@ln -s ${PWD}/zsh/zsh_plugins.txt ~/.zsh_plugins.txt

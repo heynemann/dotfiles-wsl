@@ -32,3 +32,5 @@ source "$HOME/.zsh/includes/general.zsh"
 
 # Plugins
 source "$HOME/.zsh/includes/mise.zsh"
+source "$HOME/.zsh/includes/plugins.zsh"
+source "$HOME/.zsh/includes/starship.zsh"
