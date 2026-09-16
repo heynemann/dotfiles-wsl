@@ -6,11 +6,9 @@ require("config.lazy")
 
 -- ---------- PLUGINS CONFIGURATION ---------- 
 
--- telescope
 require("config.telescope")
-
--- lualine
 require("config.lualine")
+require("config.treesitter")
 
 -- ------ END OF PLUGINS CONFIGURATION -------
 
