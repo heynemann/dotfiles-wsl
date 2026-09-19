@@ -28,3 +28,11 @@ vim.keymap.set('n', '<leader>c', '<Plug>(comment_toggle_linewise)')
 
 -- Toggle in VISUAL mode
 vim.keymap.set('x', '<leader>c', '<Plug>(comment_toggle_linewise_visual)')
+
+-- New Tabs
+vim.keymap.set('n', 'tt', ':tabnew<CR>', { silent = true })
+
+-- Search
+vim.keymap.set('n', '/', '/\\v', { silent=true, remap=false })
+vim.keymap.set('x', '/', '/\\v', { silent=true, remap=false })
+vim.keymap.set('n', '<leader><space>', ':noh<CR>', { silent=true })
