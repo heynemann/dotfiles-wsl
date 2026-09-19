@@ -14,3 +14,6 @@ require("config.treesitter")
 
 -- load key mappings
 require("config.mappings")
+
+-- programming languages
+require("config.go")
