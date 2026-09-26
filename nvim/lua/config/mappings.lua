@@ -32,6 +32,17 @@ vim.keymap.set('x', '<leader>c', '<Plug>(comment_toggle_linewise_visual)')
 -- New Tabs
 vim.keymap.set('n', 'tt', ':tabnew<CR>', { silent = true })
 
+-- TROUBLE
+-- Go to next issue (diagnostic) in the current file
+vim.keymap.set('n', 'q', function()
+  require('trouble').next({ mode = 'diagnostics', filter = { buf = 0 }, jump = true, focus = false })
+end, { desc = 'Next issue in file (Trouble)' })
+
+-- Go to previous issue (diagnostic) in the current file
+vim.keymap.set('n', 'Q', function()
+  require('trouble').prev({ mode = 'diagnostics', filter = { buf = 0 }, jump = true, focus = false })
+end, { desc = 'Previous issue in file (Trouble)' })
+
 -- Search
 vim.keymap.set('n', '/', '/\\v', { silent=true, remap=false })
 vim.keymap.set('x', '/', '/\\v', { silent=true, remap=false })
