@@ -25,3 +25,5 @@ source "$HOME/.zsh/includes/general.zsh"
 source "$HOME/.zsh/includes/mise.zsh"
 source "$HOME/.zsh/includes/plugins.zsh"
 source "$HOME/.zsh/includes/starship.zsh"
+
+export PATH="$HOME/.local/bin:$PATH"

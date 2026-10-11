@@ -4,11 +4,12 @@ require("config.general")
 -- load lazy plugins
 require("config.lazy")
 
--- ---------- PLUGINS CONFIGURATION ---------- 
+-- ---------- PLUGINS CONFIGURATION ----------
 
 require("config.telescope")
 require("config.lualine")
 require("config.treesitter")
+require("config.neotree")
 
 -- ------ END OF PLUGINS CONFIGURATION -------
 

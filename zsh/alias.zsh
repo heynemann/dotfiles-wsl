@@ -148,3 +148,26 @@ alias hit='wrk -c 50 -t 10 -d 30s --latency '
 
 # Go
 alias gonuke="go clean -i -r -cache -modcache -testcache -fuzzcache"
+
+# VIM
+alias vim="nvim"
+
+# Omp
+alias ompu="brew update && brew upgrade omp && omp plugin marketplace update heynemann && omp plugin upgrade base@heynemann"
+
+export OMP_PROFILES="doordash,unity"
+
+ompp() {
+  local -a profiles
+  profiles=(default ${(s:,:)OMP_PROFILES})          # split on commas, "default" first
+  profiles=(${(u)profiles//[[:space:]]/})            # trim spaces, drop empties and duplicates
+
+  local selected
+  selected=$(print -rl -- $profiles | fzf --prompt='omp profile> ' --height=40% --reverse) || return
+
+  if [[ $selected == default ]]; then
+    omp "$@"
+  else
+    omp --profile "$selected" "$@"
+  fi
+}
